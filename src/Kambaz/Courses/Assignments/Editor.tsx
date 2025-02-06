@@ -1,81 +1,81 @@
+import { FormControl, FormLabel, FormSelect, Form, Button } from "react-bootstrap";
+
 export default function AssignmentEditor() {
     return (
       <div id="wd-assignments-editor">
         <h2>Assignment Name</h2>
-        <input id="wd-name" value="A1 - ENV + HTML" /><br /><br />
-        <textarea id="wd-description">
-          The assignment is available online Submit a link to the landing page of
-        </textarea>
+        <FormControl id="wd-name" value="A1 - ENV + HTML" /><br /><br />
+        <FormControl as="textarea" rows={3} />
         <br />
         <table>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-points">Points</label>
+              <FormLabel htmlFor="wd-points">Points</FormLabel>
             </td>
             <td>
-              <input id="wd-points" value={100} />
+              <FormControl type="text" id="wd-points" value={100} />
             </td>
           </tr><br></br>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-group">Assignment Group</label>
+              <FormLabel htmlFor="wd-group">Assignment Group</FormLabel>
             </td>
             <td>
-              <select> id="wd-group"
-              <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-              </select>
+              <FormSelect> id="wd-group"
+                <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+              </FormSelect>
             </td>
           </tr><br></br>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-display-grade-as">Display Grade as</label>
+              <FormLabel htmlFor="wd-display-grade-as">Display Grade as</FormLabel>
             </td>
             <td>
-              <select> id="wd-display-grade-as" 
+              <FormSelect> id="wd-display-grade-as" 
               <option value="PERCENTAGE">Percentage</option>
-              </select>
+              </FormSelect>
             </td>
           </tr><br></br>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-submission-type">Submission Type</label>
+              <FormLabel htmlFor="wd-submission-type">Submission Type</FormLabel>
             </td>
             <td>
-              <select> id="wd-submission-type" 
+              <FormSelect> id="wd-submission-type" 
               <option value="ONLINE">Online</option>
-              </select>
+              </FormSelect>
             </td>
           </tr><br></br>
           <tr>
             <td></td>
             <td align="left" valign="top">
-                <label>Online Entry Options</label>
-                <br/><input type="checkbox" name="text-entry" id="wd-text-entry"/>
-                <label htmlFor="wd-text-entry">Text Entry</label>
-                <br/><input type="checkbox" name="website-url" id="wd-website-url"/>
-                <label htmlFor="wd-website-url">Wbsite URL</label>
-                <br/><input type="checkbox" name="media-recordings" id="wd-media-recordings"/>
-                <label htmlFor="wd-media-recordings">Media Recordings</label>
-                <br/><input type="checkbox" name="student-annotation" id="wd-student-annotation"/>
-                <label htmlFor="wd-student-annotation">Student Annotation</label>
-                <br/><input type="checkbox" name="file-upload" id="wd-file-upload"/>
-                <label htmlFor="wd-file-upload">File Uploads</label>
+                <FormLabel>Online Entry Options</FormLabel>
+                <br/><Form.Check type="checkbox" name="text-entry" id="wd-text-entry"/>
+                <FormLabel htmlFor="wd-text-entry">Text Entry</FormLabel>
+                <br/><Form.Check type="checkbox" name="website-url" id="wd-website-url"/>
+                <FormLabel htmlFor="wd-website-url">Wbsite URL</FormLabel>
+                <br/><Form.Check type="checkbox" name="media-recordings" id="wd-media-recordings"/>
+                <FormLabel htmlFor="wd-media-recordings">Media Recordings</FormLabel>
+                <br/><Form.Check type="checkbox" name="student-annotation" id="wd-student-annotation"/>
+                <FormLabel htmlFor="wd-student-annotation">Student Annotation</FormLabel>
+                <br/><Form.Check type="checkbox" name="file-upload" id="wd-file-upload"/>
+                <FormLabel htmlFor="wd-file-upload">File Uploads</FormLabel>
             </td>
           </tr><br></br>
           <tr>
             <td align="right" valign="top">
-                <label htmlFor="wd-assign-to">Assign</label></td>
+                <FormLabel htmlFor="wd-assign-to">Assign</FormLabel></td>
             <td align="left" valign="top">
-                <label htmlFor="wd-assign-to">Assign to</label><br />
-                <input id="wd-assign-to" value={"Everyone"} />
+                <FormLabel htmlFor="wd-assign-to">Assign to</FormLabel><br />
+                <FormControl id="wd-assign-to" value={"Everyone"} />
             </td>
           </tr><br />
           <tr>
             <td />
             <td align="left" valign="top">
                 <form>
-                <label htmlFor="wd-due-date"> Due </label><br />
-                <input type="date"
+                <FormLabel htmlFor="wd-due-date"> Due </FormLabel><br />
+                <FormControl type="date"
                 value="2024-05-13"
                 id="wd-due-date"/><br/>
                 </form>
@@ -85,16 +85,16 @@ export default function AssignmentEditor() {
             <td />
             <td align="left" valign="top">
             <form>
-                <label htmlFor="wd-available-from"> Available from </label><br />
-                <input type="date"
+                <FormLabel htmlFor="wd-available-from"> Available from </FormLabel><br />
+                <FormControl type="date"
                 value="2024-05-06"
                 id="wd-available-from"/>
             </form>
             </td>
             <td>
             <form>
-                <label htmlFor="wd-available-until"> Until </label><br />
-                <input type="date"
+                <FormLabel htmlFor="wd-available-until"> Until </FormLabel><br />
+                <FormControl type="date"
                 value="2024-05-20"
                 id="wd-available-until"/><br/>
             </form>
@@ -104,7 +104,7 @@ export default function AssignmentEditor() {
                 <td />
                 <td />
                 <td align="right" valign="top">
-                    <button>Cancel</button> <button>Save</button>
+                    <Button variant="secondary">Cancel</Button> <Button variant="danger">Save</Button>
                 </td>
             </tr>
         </table>
