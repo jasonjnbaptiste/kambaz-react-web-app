@@ -1,0 +1,92 @@
+[
+    {
+      "_id": "CS101",
+      "name": "React JS",
+      "number": "CS1234",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "COMP SCI",
+      "credits": 4,
+      "description": "Full Stack software developer",
+      "picture": "reactjs.jpg"
+    },
+    {
+      "_id": "CS102",
+      "name": "Java 4 Dummies",
+      "number": "CS2222",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "COMP SCI",
+      "credits": 3,
+      "description": "Intro to Java",
+      "picture": "java-logo.png"
+    },
+    {
+      "_id": "GAME103",
+      "name": "Let's Go Whaling",
+      "number": "GAME4550",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "Game Design",
+      "credits": 4,
+      "description": "Effective monetization in Video Games",
+      "picture": "whaling.jpg"
+    },
+    {
+      "_id": "CS104",
+      "name": "SCRUM 101",
+      "number": "CS3200",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "COMP SCI",
+      "credits": 3,
+      "description": "Navigating meetings in a corporate environment.",
+      "picture": "scrum.jpg"
+    },
+    {
+      "_id": "BIO105",
+      "name": "Anatomy of Mantis Shrimp",
+      "number": "BIO2610",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "BIOLOGY",
+      "credits": 3,
+      "description": "All there is to know about the Mantis Shrimp.",
+      "picture": "mantisshrimp.jpg"
+    },
+    {
+      "_id": "BIO106",
+      "name": "Lab for Anatomy of Mantis Shrimp",
+      "number": "BIO2611",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "BIOLOGY",
+      "credits": 1,
+      "description": "Getting hands on with Mantis Shrimp.",
+      "picture": "mantisshrimp2.jpg"
+    },
+    {
+      "_id": "PSY107",
+      "name": "Clairvoyance",
+      "number": "PSY3650",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "PSYCHOLOGY",
+      "credits": 4,
+      "description": "Never lose a game of Rock, Paper, Scissors again.",
+      "author": "654f9ec2ea7ead465908d1e3",
+      "picture": "profx.avif"
+    },
+    {
+      "_id": "WW109",
+      "name": "The Evening Redness in the West",
+      "number": "WW666",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "department": "HISTORY",
+      "credits": 4,
+      "description": "A casual exploration of the Wild West...",
+      "author": "654f9ec2ea7ead465908d1e3",
+      "picture": "thejudge.webp"
+    }
+  ]
