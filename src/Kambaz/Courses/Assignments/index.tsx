@@ -33,10 +33,9 @@ export default function Assignments() {
                     className="wd-lesson p-3 ps-1">
                     <BsGripVertical className="me-2 fs-3" /> 
                     <LuNotebookPen className="me-2 fs-3" />
-                    {assignment.title}
+                    {assignment.title} <AssignmentControlButtons />
                     <br></br>Multiple Modules |<b> Not available until</b> {assignment.postDate} | <br></br>
                     <b>Due</b> {assignment.dueDate} | {assignment.points}
-                    <AssignmentControlButtons />
                     </ListGroup.Item>
               ))}</ListGroup>
             )}</ListGroup.Item>
