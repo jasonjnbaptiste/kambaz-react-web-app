@@ -101,7 +101,7 @@ export default function AssignmentEditor() {
             <form>
                 <FormLabel htmlFor="wd-available-until"> Until </FormLabel><br />
                 <FormControl type="date"
-                value={`${assignment?.postDateForm}`}
+                value={`${assignment?.dueDateForm}`}
                 id="wd-available-until"/><br/>
             </form>
             </td>
@@ -110,8 +110,16 @@ export default function AssignmentEditor() {
                 <td />
                 <td />
                 <td align="right" valign="top">
-                    <Button as={Link} to={`../Assignments`} variant="secondary">Cancel</Button> 
-                    <Button as={Link} to={`../Assignments`} variant="danger">Save</Button>
+                    <Link to={`../Assignments`}>
+                      <Button variant="secondary">
+                        Cancel
+                      </Button>
+                    </Link> 
+                    <Link to={`../Assignments`}>
+                      <Button variant="danger">
+                        Save    
+                      </Button>
+                    </Link>
                 </td>
             </tr>
         </table>
