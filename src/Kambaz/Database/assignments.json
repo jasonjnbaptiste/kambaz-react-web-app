@@ -1,11 +1,11 @@
 [
-    { "_id": "A101", "title": "Propulsion Assignment", "course": "CS101", "postDate": "May 6 at 12:00am", "dueDate": "May 13 at 11:59pm", "points": "100" },
-    { "_id": "A102", "title": "Combustion Analysis", "course": "CS101", "postDate": "May 14 at 12:00am", "dueDate": "May 20 at 11:59pm", "points": "100" },
-    { "_id": "A103", "title": "Nozzle Design Project", "course": "CS101", "postDate": "May 21 at 12:00am", "dueDate": "May 27 at 11:59pm", "points": "100" },
-    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS102", "postDate": "May 6 at 12:00am", "dueDate": "May 13 at 11:59pm", "points": "100" },
-    { "_id": "A202", "title": "Flow Analysis", "course": "CS102", "postDate": "May 14 at 12:00am", "dueDate": "May 20 at 11:59pm", "points": "100" },
-    { "_id": "A203", "title": "Heating Analysis", "course": "CS102", "postDate": "May 21 at 12:00am", "dueDate": "May 27 at 11:59pm", "points": "100" },
-    { "_id": "A301", "title": "Structural Design Task", "course": "GAME103", "postDate": "May 6 at 12:00am", "dueDate": "May 13 at 11:59pm", "points": "100" },
-    { "_id": "A302", "title": "Orbital Calculations", "course": "GAME103", "postDate": "May 14 at 12:00am", "dueDate": "May 20 at 11:59pm", "points": "100" },
-    { "_id": "A303", "title": "Systems Engineering Exam", "course": "GAME103", "postDate": "May 21 at 12:00am", "dueDate": "May 27 at 11:59pm", "points": "100" }
+    { "_id": "A101", "title": "Propulsion Assignment", "course": "CS101", "postDate": "May 6 at 12:00am", "postDateForm": "2024-05-06", "dueDate": "May 13 at 11:59pm", "dueDateForm": "2024-05-13", "points": "100", "description": "Fly high..." },
+    { "_id": "A102", "title": "Combustion Analysis", "course": "CS101", "postDate": "May 14 at 12:00am", "postDateForm": "2024-05-14", "dueDate": "May 20 at 11:59pm", "dueDateForm": "2024-05-20", "points": "100", "description": "Biggest explosion wins." },
+    { "_id": "A103", "title": "Nozzle Design Project", "course": "CS101", "postDate": "May 21 at 12:00am", "postDateForm": "2024-05-21", "dueDate": "May 27 at 11:59pm", "dueDateForm": "2024-05-27", "points": "100", "description": "Down to to nitty gritty." },
+    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS102", "postDate": "May 6 at 12:00am", "postDateForm": "2024-05-06", "dueDate": "May 13 at 11:59pm", "dueDateForm": "2024-05-13", "points": "100", "description": "Sleek = Fast" },
+    { "_id": "A202", "title": "Flow Analysis", "course": "CS102", "postDate": "May 14 at 12:00am", "postDateForm": "2024-05-14", "dueDate": "May 20 at 11:59pm", "dueDateForm": "2024-05-20", "points": "100", "description": "Analyzing flow" },
+    { "_id": "A203", "title": "Heating Analysis", "course": "CS102", "postDate": "May 21 at 12:00am", "postDateForm": "2024-05-21", "dueDate": "May 27 at 11:59pm", "dueDateForm": "2024-05-27", "points": "100", "description": "Analyzing heating" },
+    { "_id": "A301", "title": "Structural Design Task", "course": "GAME103", "postDate": "May 6 at 12:00am", "postDateForm": "2024-05-06", "dueDate": "May 13 at 11:59pm", "dueDateForm": "2024-05-13", "points": "100", "description": "Never Dump Con." },
+    { "_id": "A302", "title": "Orbital Calculations", "course": "GAME103", "postDate": "May 14 at 12:00am", "postDateForm": "2024-05-14", "dueDate": "May 20 at 11:59pm", "dueDateForm": "2024-05-20", "points": "100", "description": "For efficient strategem usage" },
+    { "_id": "A303", "title": "Systems Engineering Exam", "course": "GAME103", "postDate": "May 21 at 12:00am", "postDateForm": "2024-05-21", "dueDate": "May 27 at 11:59pm", "dueDateForm": "2024-05-27", "points": "100", "description": " Systems and the like" }
 ]
