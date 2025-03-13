@@ -8,8 +8,6 @@ import { LuNotebookPen } from "react-icons/lu";
 import * as db from "../../Database";
 import { useParams } from "react-router";
 import { Link, useLocation } from "react-router-dom";
-
-
 export default function Assignments() {
   const { cid } = useParams();
   const assignments = db.assignments;

@@ -3,15 +3,16 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import * as db from "../../Database";
 
-export default function AssignmentEditor() {
-  const { cid } = useParams();
+export default function AssignmentEditor({addAssignment}: {
+  addAssignment: () => void;}) {
+  const { aid } = useParams();
   const assignments = db.assignments;
-  const assignment = assignments.find((assignment) => assignment.course === cid)
+  const assignment = assignments.find((assignment) => assignment._id === aid)
     return (
       <div id="wd-assignments-editor">
         Assignment Name
-        <FormControl id="wd-name" value={`${assignment?.title}`} /><br /><br />
-        <FormControl as="textarea" rows={3} value={`${assignment?.description}`}/>
+        <FormControl id="wd-name" defaultValue={`${assignment?.title}`} /><br /><br />
+        <FormControl as="textarea" rows={3} defaultValue={`${assignment?.description}`}/>
         <br />
         <table>
           <tr>
@@ -19,7 +20,7 @@ export default function AssignmentEditor() {
               <FormLabel htmlFor="wd-points">Points</FormLabel>
             </td>
             <td>
-              <FormControl type="text" id="wd-points" value={assignment?.points} />
+              <FormControl type="text" id="wd-points" defaultValue={assignment?.points} />
             </td>
           </tr><br></br>
           <tr>
@@ -28,7 +29,7 @@ export default function AssignmentEditor() {
             </td>
             <td>
               <FormSelect> id="wd-group"
-                <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+                <option defaultValue="ASSIGNMENTS">ASSIGNMENTS</option>
               </FormSelect>
             </td>
           </tr><br></br>
@@ -38,7 +39,7 @@ export default function AssignmentEditor() {
             </td>
             <td>
               <FormSelect> id="wd-display-grade-as" 
-              <option value="PERCENTAGE">Percentage</option>
+              <option defaultValue="PERCENTAGE">Percentage</option>
               </FormSelect>
             </td>
           </tr><br></br>
@@ -48,7 +49,7 @@ export default function AssignmentEditor() {
             </td>
             <td>
               <FormSelect> id="wd-submission-type" 
-              <option value="ONLINE">Online</option>
+              <option defaultValue="ONLINE">Online</option>
               </FormSelect>
             </td>
           </tr><br></br>
@@ -82,7 +83,7 @@ export default function AssignmentEditor() {
                 <form>
                 <FormLabel htmlFor="wd-due-date"> Due </FormLabel><br />
                 <FormControl type="date"
-                value={`${assignment?.dueDateForm}`}
+                defaultValue={`${assignment?.dueDateForm}`}
                 id="wd-due-date"/><br/>
                 </form>
             </td>
@@ -93,7 +94,7 @@ export default function AssignmentEditor() {
             <form>
                 <FormLabel htmlFor="wd-available-from"> Available from </FormLabel><br />
                 <FormControl type="date"
-                value={`${assignment?.postDateForm}`}
+                defaultValue={`${assignment?.postDateForm}`}
                 id="wd-available-from"/>
             </form>
             </td>
@@ -101,7 +102,7 @@ export default function AssignmentEditor() {
             <form>
                 <FormLabel htmlFor="wd-available-until"> Until </FormLabel><br />
                 <FormControl type="date"
-                value={`${assignment?.dueDateForm}`}
+                defaultValue={`${assignment?.dueDateForm}`}
                 id="wd-available-until"/><br/>
             </form>
             </td>
@@ -116,7 +117,10 @@ export default function AssignmentEditor() {
                       </Button>
                     </Link> 
                     <Link to={`../Assignments`}>
-                      <Button variant="danger">
+                      <Button variant="danger"
+                        onClick={() => {
+                          addAssignment();
+                        }}>
                         Save    
                       </Button>
                     </Link>

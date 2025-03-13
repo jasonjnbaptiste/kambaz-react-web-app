@@ -6,11 +6,15 @@ import AssignmentEditor from "./Assignments/Editor";
 import {Navigate, Route, Routes, useParams, useLocation} from "react-router";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
-import { courses } from "../Database";
-export default function Courses() {
-  const { cid } = useParams();
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addAssignment } from "./Assignments/reducer";
+export default function Courses({ courses }: { courses: any[]; }) {
+  const { cid, aid } = useParams();
   const course = courses.find((course) => course._id === cid);
   const { pathname } = useLocation();
+  const dispatch = useDispatch();
+  const [assignmentName, setAssignmentName] = useState("");
     return (
       <div id="wd-courses">
         <h2 className="text-danger">
@@ -27,7 +31,10 @@ export default function Courses() {
                   <Route path="Home" element={<Home />} />
                   <Route path="Modules" element={<Modules />} />
                   <Route path="Assignments" element={<Assignments />} />
-                  <Route path="Assignments/:aid" element={< AssignmentEditor />} />
+                  <Route path="Assignments/:aid" element={< AssignmentEditor addAssignment={() => {
+                    dispatch(addAssignment({_id: aid, title: assignmentName}));
+                    setAssignmentName("");
+                  }}/>} />
                   <Route path="People" element={<PeopleTable />} />
                 </Routes>
               </div>
