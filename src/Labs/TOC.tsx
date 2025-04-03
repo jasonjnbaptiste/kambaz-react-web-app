@@ -27,7 +27,9 @@ export default function TOC() {
         <Nav.Link as={Link} to="/Kambaz" id="wd-a3">Kambaz</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="https://github.com/jasonjnbaptiste/kanbas-react-web-app" target="_blank">My GitHub</Nav.Link>
+        <Nav.Link href="https://github.com/jasonjnbaptiste/kambaz-react-web-app/tree/a5" target="_blank">React GitHub</Nav.Link>
+        <Nav.Link href="https://github.com/jasonjnbaptiste/kambaz-node-server-app/tree/a5" target="_blank">Node GitHub</Nav.Link>
+        <Nav.Link href="https://kambaz-node-server-app-lzzb.onrender.com/" target="_blank">Render Server</Nav.Link>
       </Nav.Item>
     </Nav>
     );
