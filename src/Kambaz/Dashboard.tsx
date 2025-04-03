@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import * as db from "./Database";
 import { Link } from "react-router-dom";
 import { Row, Col, Card, Button, FormControl } from "react-bootstrap";
 import ProtectedFacultyComponent from "./ProtectedFacultyComponent";
@@ -10,8 +9,7 @@ export default function Dashboard(
   addNewCourse: () => void; deleteCourse: (course: any) => void;
   updateCourse: () => void; })
 {
-  const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const { enrollments } = db;
+  const { } = useSelector((state: any) => state.accountReducer);
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -35,14 +33,7 @@ export default function Dashboard(
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> <hr />
       <div id="wd-dashboard-courses">
         <Row xs={1} md={5} className="g-4">
-          {courses
-            .filter((course) =>
-              enrollments.some(
-                (enrollment) =>
-                  enrollment.user === currentUser._id &&
-                  enrollment.course === course._id
-                ))
-          .map((course) => (
+          {courses.map((course) => (
             <Col className="wd-dashboard-course" style={{ width: "300px" }}>
               <Card>
                 <Link to={`/Kambaz/Courses/${course._id}/Home`}
