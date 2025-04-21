@@ -2,14 +2,11 @@ import { Button, FormControl, FormGroup, InputGroup } from "react-bootstrap";
 import { FaPlus } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import ProtectedFacultyComponent from "../../ProtectedFacultyComponent";
-import { Link, useLocation } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import { IoEllipsisVertical } from "react-icons/io5";
 import * as client from "./client";
 import { useState } from "react";
 export default function QuizzesControls() {
     const [quizzes, setQuizzes] = useState<any[]>([]);
-    const { pathname } = useLocation();
     const createQuiz = async () => {
         const quiz = await client.createQuiz({
             title: "New Quiz",
