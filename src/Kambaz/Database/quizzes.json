@@ -1,6 +1,7 @@
 [
   {"_id": "Q1", 
-    "title": "Q1", 
+    "title": "Q1",
+    "description": "The first quiz.",
     "course": "CS101", 
     "postDate": "March 6 at 12:00am", 
     "postDateForm": "2025-03-06", 

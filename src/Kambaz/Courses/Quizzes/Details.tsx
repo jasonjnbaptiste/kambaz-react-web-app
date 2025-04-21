@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import * as db from "../../Database";
 import { FormLabel } from "react-bootstrap";
 
@@ -9,6 +10,7 @@ export default function QuizDetails() {
   return (
     <div id="wd-quiz-details">
       <h1>{quiz?.title}</h1>
+      <Link  to="./edit" className="btn btn-danger wd-edit-quiz-btn">Edit</Link>
       <table>
         <tr>
         <td></td><td></td>

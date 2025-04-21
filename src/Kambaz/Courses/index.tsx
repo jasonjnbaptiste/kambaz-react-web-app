@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { addAssignment } from "./Assignments/reducer";
 import Quizzes from "./Quizzes";
 import QuizDetails from "./Quizzes/Details";
+import QuizEditor from "./Quizzes/Editor";
 export default function Courses({ courses }: { courses: any[]; }) {
   const { cid, aid } = useParams();
   const course = courses.find((course) => course._id === cid);
@@ -40,6 +41,7 @@ export default function Courses({ courses }: { courses: any[]; }) {
                   <Route path="People" element={<PeopleTable />} />
                   <Route path="Quizzes" element={<Quizzes />} />
                   <Route path="Quizzes/:qid" element={<QuizDetails />} />
+                  <Route path="Quizzes/:qid/edit" element={<QuizEditor />} />
                 </Routes>
               </div>
         </div>

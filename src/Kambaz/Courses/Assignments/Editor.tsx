@@ -28,7 +28,7 @@ export default function AssignmentEditor({addAssignment}: {
               <FormLabel htmlFor="wd-group">Assignment Group</FormLabel>
             </td>
             <td>
-              <FormSelect> id="wd-group"
+              <FormSelect id="wd-group">
                 <option defaultValue="ASSIGNMENTS">ASSIGNMENTS</option>
               </FormSelect>
             </td>
@@ -38,7 +38,7 @@ export default function AssignmentEditor({addAssignment}: {
               <FormLabel htmlFor="wd-display-grade-as">Display Grade as</FormLabel>
             </td>
             <td>
-              <FormSelect> id="wd-display-grade-as" 
+              <FormSelect id="wd-display-grade-as">
               <option defaultValue="PERCENTAGE">Percentage</option>
               </FormSelect>
             </td>
@@ -48,7 +48,7 @@ export default function AssignmentEditor({addAssignment}: {
               <FormLabel htmlFor="wd-submission-type">Submission Type</FormLabel>
             </td>
             <td>
-              <FormSelect> id="wd-submission-type" 
+              <FormSelect id="wd-submission-type">
               <option defaultValue="ONLINE">Online</option>
               </FormSelect>
             </td>
