@@ -1,17 +1,33 @@
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import * as db from "../../Database";
-import { FormControl, FormLabel, FormSelect, Form, Button } from "react-bootstrap";
+import { FormControl, FormLabel, FormSelect, Form, Button, Nav } from "react-bootstrap";
+import { FaPlus } from "react-icons/fa";
 
-export default function QuizEditor() {
-  const { qid } = useParams();
+export default function QuizDetailsEditor() {
+  const { qid, cid } = useParams();
   const quizzes = db.quizzes;
   const quiz = quizzes.find((quiz) => quiz._id === qid)
+  const courses = db.courses;
+  const course = courses.find(() => quiz?.course === cid)
+  const links = ["details", "questions"];
+  const { pathname } = useLocation();
     return (
       <div id="wd-quiz-editor">
         <div style={{ textAlign: "right" }}>
           <>Points {quiz?.points}</> 
         </div> <br />
+        <Nav variant="tabs">
+          {links.map((link) => (
+            <Nav.Item>
+              <Nav.Link key={`/Kambaz/Courses/${course?._id}/Quizzes/${quiz?._id}/edit/${link}`} as={Link} to={`/Kambaz/Courses/${course?._id}/Quizzes/${quiz?._id}/edit/${link}`}
+                        className={`${pathname.includes(link) ? "text-black" : "text-danger"} border border-0`}>
+                {link.includes("details") ? "Details" : "Questions"}
+              </Nav.Link>
+            </Nav.Item>
+          ))}
+        </Nav>
+        <br />
         <FormControl id="wd-name" defaultValue={`${quiz?.title}`} /> <br />
         Quiz Instructions:
         <FormControl as="textarea" rows={3} defaultValue={`${quiz?.description}`}/>
@@ -173,3 +189,44 @@ export default function QuizEditor() {
       </div>
     )
 }
+
+export function QuizQuestionsEditor() {
+  const { qid, cid } = useParams();
+  const quizzes = db.quizzes;
+  const quiz = quizzes.find((quiz) => quiz._id === qid)
+  const courses = db.courses;
+  const course = courses.find(() => quiz?.course === cid)
+  const links = ["details", "questions"];
+  const { pathname } = useLocation();
+    return (
+      <div id="wd-quiz-editor">
+        <Nav variant="tabs">
+          {links.map((link) => (
+            <Nav.Item>
+              <Nav.Link key={`/Kambaz/Courses/${course?._id}/Quizzes/${quiz?._id}/edit/${link}`} as={Link} to={`/Kambaz/Courses/${course?._id}/Quizzes/${quiz?._id}/edit/${link}`}
+                        className={`${pathname.includes(link) ? "text-black" : "text-danger"} border border-0`}>
+                {link.includes("details") ? "Details" : "Questions"}
+              </Nav.Link>
+            </Nav.Item>
+          ))}
+        </Nav>
+        <br />
+        <div className="d-flex justify-content-center mt-2">
+          <Button variant="secondary">
+            <FaPlus className="me-2" />
+            New Question
+          </Button>
+        </div>
+        <br /> <hr />
+        <Link to={`../Quizzes`}>
+          <Button variant="secondary">
+            Cancel
+          </Button>
+        </Link> 
+        <Link to={`../Quizzes/${qid}`} style={{ padding: "5px" }}>
+          <Button variant="danger">
+            Save    
+          </Button>
+        </Link>
+      </div>
+)}

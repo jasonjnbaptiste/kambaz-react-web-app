@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import * as db from "../../Database";
 import { FormLabel } from "react-bootstrap";
+import ProtectedFacultyComponent from "../../ProtectedFacultyComponent";
 
 export default function QuizDetails() {
   const { qid } = useParams();
@@ -10,7 +11,9 @@ export default function QuizDetails() {
   return (
     <div id="wd-quiz-details">
       <h1>{quiz?.title}</h1>
-      <Link  to="./edit" className="btn btn-danger wd-edit-quiz-btn">Edit</Link>
+      <ProtectedFacultyComponent>
+        <Link  to="./edit/details" className="btn btn-danger wd-edit-quiz-btn">Edit</Link>
+      </ProtectedFacultyComponent>
       <table>
         <tr>
         <td></td><td></td>
