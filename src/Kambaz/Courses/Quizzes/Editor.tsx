@@ -199,7 +199,10 @@ export function QuizQuestionsEditor() {
   const links = ["details", "questions"];
   const { pathname } = useLocation();
     return (
-      <div id="wd-quiz-editor">
+      <div id="wd-quiz-questions-editor">
+        <div style={{ textAlign: "right" }}>
+          <>Points 0</> 
+        </div> <br />
         <Nav variant="tabs">
           {links.map((link) => (
             <Nav.Item>
@@ -212,10 +215,12 @@ export function QuizQuestionsEditor() {
         </Nav>
         <br />
         <div className="d-flex justify-content-center mt-2">
-          <Button variant="secondary">
-            <FaPlus className="me-2" />
-            New Question
-          </Button>
+          <Link to={`./new-question`}>
+            <Button variant="secondary">
+              <FaPlus className="me-2" />
+              New Question
+            </Button>
+          </Link>
         </div>
         <br /> <hr />
         <Link to={`../Quizzes`}>
