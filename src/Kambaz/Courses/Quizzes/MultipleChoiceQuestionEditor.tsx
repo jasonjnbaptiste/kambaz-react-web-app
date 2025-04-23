@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, FormSelect } from "react-bootstrap";
+import { Button, Form, FormControl, FormLabel } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import * as db from "../../Database";
 
@@ -8,32 +8,15 @@ export default function MultipleChoiceQuestionEditor() {
   quizzes.find((quiz) => quiz._id === qid)
   return (
     <div>
-      <table>
-        <tr>
-          <td>
-            <FormControl id="wd-title" defaultValue="New Question" style={{ width: "150px" }}/>
-          </td>
-          <td style={{ paddingLeft: "10px" }}>
-            <FormSelect id="wd-type" style={{ width: "250px" }}>
-              <option defaultValue="mutli-choice">Multiple Choice</option>
-              <option value="true-false">True/False</option>
-              <option value="fill-blank">Fill in the Blank</option>
-            </FormSelect>
-          </td>
-          <td style={{ paddingLeft: "10px" }}>
-            <FormLabel htmlFor="wd-points"><b>pts:</b></FormLabel>
-          </td>
-          <td>
-            <FormControl id="wd-points" style={{ width: "50px" }}/>
-          </td>
-        </tr>
-      </table>
       Enter your question and multiple answers, then select one correct answer.
       <h3><b>Question:</b></h3> <br />
       <FormControl as="textarea" rows={3} defaultValue="Question goes here."/> <br />
       <h3><b>Answers:</b></h3> <br />
       <table>
           <tr>
+            <td style={{ textAlign: "right", paddingRight: "10px" }}>
+              <Form.Check type="radio" name="answer" value="a"/>
+            </td>
             <td style={{ textAlign: "right", verticalAlign: "bottom", paddingRight: "10px" }}>
               <FormLabel htmlFor="wd-answer">Possible Answer</FormLabel>
             </td>
@@ -43,6 +26,9 @@ export default function MultipleChoiceQuestionEditor() {
           </tr>
           <br />
           <tr>
+            <td style={{ textAlign: "right", paddingRight: "10px" }}>
+              <Form.Check type="radio" name="answer" value="b"/>
+            </td>
             <td style={{ textAlign: "right", verticalAlign: "bottom", paddingRight: "10px" }}>
               <FormLabel htmlFor="wd-answer">Possible Answer</FormLabel>
             </td>
@@ -52,6 +38,9 @@ export default function MultipleChoiceQuestionEditor() {
           </tr>
           <br />
           <tr>
+            <td style={{ textAlign: "right", paddingRight: "10px" }}>
+              <Form.Check type="radio" name="answer" value="c"/>
+            </td>
             <td style={{ textAlign: "right", verticalAlign: "bottom", paddingRight: "10px" }}>
               <FormLabel htmlFor="wd-answer">Possible Answer</FormLabel>
             </td>
@@ -61,6 +50,9 @@ export default function MultipleChoiceQuestionEditor() {
           </tr>
           <br />
           <tr>
+            <td style={{ textAlign: "right", paddingRight: "10px" }}>
+              <Form.Check type="radio" name="answer" value="d"/>
+            </td>
             <td style={{ textAlign: "right", verticalAlign: "bottom", paddingRight: "10px" }}>
               <FormLabel htmlFor="wd-answer">Possible Answer</FormLabel>
             </td>
